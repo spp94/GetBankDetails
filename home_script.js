@@ -2,12 +2,12 @@ $(document).ready(function(){
     // function to validate if IFSC Code is a valid one or not
     function validateIFSC(ifsc) {
         var inputVal = ifsc; // variable to store ifsc code
-        var numericReg = /^[A-Za-z]{4}\d{7}$/;
-        if (!numericReg.test(inputVal)) {
-            return false;
+        var numericReg = /^[A-Za-z]{4}\d{7}$/; // regex to validate a valid IFSC Code
+        if (!numericReg.test(inputVal)) { // checking if a ifsc code is a valid one or not   
+            return false;  // return false if invalid ifsc code
         }
         else {
-            return true;
+            return true; // returns true if valid ifsc code
         }
     }
     // function to fetch bank details using the IFSC Code 
