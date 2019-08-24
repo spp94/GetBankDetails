@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-    function validateIFSC(ifsc)
-    {
+    function validateIFSC(ifsc) {
         var inputVal = ifsc;
         var numericReg = /^[A-Za-z]{4}\d{7}$/;
         if (!numericReg.test(inputVal)) {
@@ -13,11 +12,8 @@ $(document).ready(function(){
     }
 
     function getBankDetails() {
-        debugger;
         var ifscCode = $("#txtIFSCCode").val();
-   
         if (ifscCode != '') {
-            debugger;
             if (validateIFSC(ifscCode)) {
                 $.ajax({
                     url: ' https://ifsc.razorpay.com/' + ifscCode,
@@ -50,7 +46,6 @@ $(document).ready(function(){
     }
 
     function showResults(data) {
-        debugger;
         var text = "<br><br>" + "<table id = 'tblDetails'>" +
                 "<tr><td><h4>Bank: </td><td>" + data.BANK + "</h4></td></tr>" +
                 "<tr><td><h4>Branch Name: </td><td>" + data.BRANCH + "</h4></td></tr>" +
@@ -64,7 +59,6 @@ $(document).ready(function(){
         return text;
     }
     $("#btnSubmit").click(function () {
-        debugger;
         getBankDetails();
     });
 });
