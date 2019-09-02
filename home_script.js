@@ -1,4 +1,4 @@
-$(document).ready(function(){ 
+$(document).ready(function(){
     // function to validate if IFSC Code is a valid one or not
     function validateIFSC(ifsc) {
         var inputVal = ifsc; // variable to store ifsc code
